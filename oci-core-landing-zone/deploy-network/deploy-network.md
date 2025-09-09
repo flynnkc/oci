@@ -17,7 +17,7 @@ We will need to return to the configurations that we used to define the Landing 
 1. In the *Stacks* menu for the *Resource Manager Stack* we deployed in the previous lab, select __Variables__ under *Resources*.
 1. Click the __Edit Variables__ button. Please note that it may take a moment for the variables form to populate.
 
-    ![Edit variables on the stack menu](./images/edit-variables-btn.png "Select the Edit Variables button")
+    ![Edit variables window with highlighted button in Resource Manager Stack](./images/edit-variables-btn.png "Select the Edit Variables button")
 
 1. Select the __Define Network Topology?__ checkbox in the *Configuration Options* section of the stack variables.
 
@@ -71,4 +71,4 @@ In the next lab, we will increase the complexity (and scalability) of our Core L
 
 - __Author__ - KC Flynn
 - __Contributors__ - Andre Correa, Johannes Murmann, Josh Hammer, Olaf Heimburger
-- __Last Updated By/Date__ - KC Flynn August 2025
+- __Last Updated By/Date__ - KC Flynn September 2025

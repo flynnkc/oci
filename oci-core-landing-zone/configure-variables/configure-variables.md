@@ -19,10 +19,10 @@ This section sets general environmental configurations for the Landing Zone. Inp
 
 1. First check the __Free Tenancy?__ box. This will prevent the Landing Zone from deploying Cloud Guard & Security Zones. These services are not available in Free Tier tenancies and may conflict with settings in existing tenancies.
 
-    We recommend using Cloud Guard if eligible. For the purposes of this lab, we are not going to use it with the Landing Zone.
-1. The next field to check is the __Region__. Most likely, your current region is entered here automatically. If you want to deploy into another region, just select the appropriate value from the drop-down menu. You must be [subscribed to the region](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingregions.htm#uconsole) prior to deployment.
-1. Next, set the __CIS Level__ variable. There are two levels of CIS compliance to choose from. These levels correspond to requirements found in the [CIS OCI Foundations Benchmark v2.0](https://www.cisecurity.org/benchmark/oracle_cloud/). To see a full list of changes between CIS Levels 1 & 2, please refer to the benchmark. The high level summary is that CIS Level 2 requires more strict encryption necessitating the creation of an [OCI Vault](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Concepts/keyoverview.htm) and encryption keys. __We will use CIS Level 1 for this lab__.
-1. The final field is __Service Label__. This service label will be prepended to everything created by the Landing Zone. As such, we need to choose a succinct value to enter. The requirements for service labels are 2-15 characters, the first being a letter. If you violate these rules, the field will let you know.
+    We recommend enabling and configuring Cloud Guard if eligible. We are not going to use Cloud Guard in this lab.
+1. The next field to check is the __Region__. Most likely your current region is entered here automatically. If deployment to another region is desired, select the appropriate value from the drop-down menu. You must be [subscribed to the region](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingregions.htm#uconsole) prior to deployment.
+1. Next, set the __CIS Level__ variable. There are two levels of CIS compliance to choose from. These levels correspond to requirements found in the [CIS OCI Foundations Benchmark v3.0](https://www.cisecurity.org/benchmark/oracle_cloud/). To see a full list of changes between CIS Levels 1 & 2, please refer to the benchmark. CIS Level 2 requires additional encryption necessitating the creation of an [OCI Vault](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Concepts/keyoverview.htm) and encryption keys. __We will use CIS Level 1 for this lab__.
+1. The final field is __Service Label__. This service label will be prepended to everything created by the Landing Zone. As such, we need to choose a succinct value to enter. The requirements for service labels are 2-15 characters, the first being a letter. Resource Manager will display an error message on the field if these rules are violated.
 
     ![The Environment Menu Options](images/environment-menu.png "Environment Menu Options")
 
@@ -32,13 +32,13 @@ This section sets general environmental configurations for the Landing Zone. Inp
 
     ![Configuration Options](./images/compartment-options.png)
 
-1. In the _Compartments_ section, select the __Enclosing Compartment Parent__ compartment from the drop down. Leave the other settings on default. The _Compartments_ section should match the below picture, except for the chosen enclosing compartment.
+1. In the _Compartments_ section, select the __Enclosing Compartment Parent__ compartment from the drop down. Leave the other settings as default. The _Compartments_ section should match the below picture, except for the chosen enclosing compartment.
 
     ![Compartments Options](./images/compartments-configs.png)
 
 ## Task 3: Configure Events and Notifications
 
-There are two required notification contacts as required by CIS controls. An email address for a network admin and a security admin. Once created, these addresses will receive a confirmation email letting the person on the other end know that they are signed up for these notifications. Upon validating that they want to continue receiving the notifications, they will be sent messages when a network or security (IAM) object is created, modified, or destroyed. There can be multiple endpoints for each service to allow for redundancy if specifying the addresses of individuals. More often than not, these notifications go to shared inboxes for their respective teams.
+There are two required notification contacts as required by CIS controls. An email address for a network admin and a security admin. Once created, these addresses will receive a confirmation email that will need to be accepted before notifications are sent. Upon validating that they want to continue receiving the notifications, they will be sent messages when a network or security (IAM) object is created, modified, or destroyed. There can be multiple endpoints for each service to allow for redundancy if specifying the addresses of individuals.
 
 There are further endpoints defined for admins of other services, but these are not mandatory under the CIS benchmark. For this lab, we will not use them.
 
@@ -69,4 +69,4 @@ Once the Stack configuration is saved, move on to the next lab to continue.
 
 - __Author__ - KC Flynn
 - __Contributors__ - Andre Correa, Johannes Murmann, Josh Hammer, Olaf Heimburger
-- __Last Updated By/Date__ - KC Flynn August 2025
+- __Last Updated By/Date__ - KC Flynn September 2025

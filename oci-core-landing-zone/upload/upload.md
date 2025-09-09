@@ -26,7 +26,7 @@ In this lab you will:
 
 3. Select a name for the enclosing compartment as well as an appropriate parent compartment.
 
-    ![Creat compartment menu](./images/create-compartment-menu.png)
+    ![Create compartment menu](./images/create-compartment-menu.png)
 
 4. Click the __Create Compartment__ button.
 
@@ -50,4 +50,4 @@ In this lab you will:
 
 - __Author__ - KC Flynn
 - __Contributors__ - Andre Correa, Johannes Murmann, Josh Hammer, Olaf Heimburger
-- __Last Updated By/Date__ - KC Flynn August 2025
+- __Last Updated By/Date__ - KC Flynn September 2025
